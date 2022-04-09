@@ -78,7 +78,8 @@
         <section class="signboard">
             <img class="signboard_photo" src="img/singboard-photo.png" alt="singboard-photo">
             <div class="signboard__title-wrp">
-                <h1 class="signboard__title">the brand <span class="signboard__subtitle">of luxerious <span
+                <div class="signboard__rectangle"></div>
+                <h1 class="signboard__title">the brand <span class="signboard__subtitle">of luxurious <span
                             class="signboard__subtitle-pink">fashion</span></span></h1>
             </div>
         </section>
@@ -87,20 +88,20 @@
             <h2 class="visually-hidden">categories</h2>
             <ul class="categories__list">
                 <li class="categories__item categories__item--women">
-                    <p>30% off</p>
-                    <h3>for women</h3>
+                    <p class="categories__text">30% off</p>
+                    <h3 class="categories__title">for women</h3>
                 </li>
                 <li class="categories__item categories__item--men">
-                    <p>hot deal</p>
-                    <h3>for men</h3>
+                    <p class="categories__text">hot deal</p>
+                    <h3 class="categories__title">for men</h3>
                 </li>
                 <li class="categories__item categories__item--kids">
-                    <p>new arrivals</p>
-                    <h3>for kids</h3>
+                    <p class="categories__text">new arrivals</p>
+                    <h3 class="categories__title">for kids</h3>
                 </li>
                 <li class="categories__item categories__item--accesories">
-                    <p>luxurious&trendy </p>
-                    <h3>accesories</h3>
+                    <p class="categories__text">luxurious&trendy </p>
+                    <h3 class="categories__title">accesories</h3>
                 </li>
             </ul>
         </section>
@@ -110,52 +111,59 @@
             <ul class="featured__list">
                 <li class="featured__item">
                     <img src="img/item-1.jpg" alt="item">
-                    <h3>ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <h3 class="featured__item-name">ellery x m'o capsule</h3>
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
                 <li class="featured__item">
                     <img class="featured__img" src="img/item-2.jpg" alt="item">
                     <h3 class="featured__item-name">ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
                 <li class="featured__item">
                     <img class="featured__img" src="img/item-3.jpg" alt="item">
                     <h3 class="featured__item-name">ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
                 <li class="featured__item">
                     <img class="featured__img" src="img/item-4.jpg" alt="item">
                     <h3 class="featured__item-name">ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
                 <li class="featured__item">
                     <img class="featured__img" src="img/item-5.jpg" alt="item">
                     <h3 class="featured__item-name">ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
                 <li class="featured__item">
                     <img class="featured__img" src="img/item-6.jpg" alt="item">
                     <h3 class="featured__item-name">ellery x m'o capsule</h3>
-                    <p>known for her sculptural takes on traditional tailoring, australian arbiter of cool kym ellery
+                    <p class="featured__item-text">known for her sculptural takes on traditional tailoring, australian
+                        arbiter of cool kym ellery
                         teams up with moda operandi.</p>
-                    <p>$52</p>
+                    <p class="featured__price">$52</p>
                 </li>
             </ul>
+            <button class="featured__button">browse all product</button>
         </section>
         <section class="advantages">
             <!-- скрытый заголовок -->
             <h2 class="visually-hidden">advantages</h2>
-            <ul class="advantages__list">
+            <ul class="advantages__list container">
                 <li class="advantages__item">
                     <img class="advantages__img" src="img/delivery-logo.png" alt="free-delivery">
                     <h3 class="advantages__title">free delivery</h3>
@@ -181,36 +189,46 @@
         </section>
     </main>
     <footer class="footer">
-        <section class="footer__sct1">
-            <div class="footer__review">
-                <img class="footer__review-img" src="img/client-photo.png" alt="client-photo">
-                <p class="footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                    condimentum“</p>
-            </div>
-            <div class="footer__subscribe">
-                <h3 class="footer__title">subscribe for our newletter and promotion</h3>
-                <form class="footer__form" action="">
-                    <input class="footer__input" class="inp" type="email" placeholder="Enter Your Email">
-                    <button class="footer__button">subscribe</button>
-                </form>
+        <section class="footer__feedback">
+            <div class="footer__feedback-wrp container">
+                <div class="footer__review">
+                    <img class="footer__review-img" src="img/client-photo.png" alt="client-photo">
+                    <p class="footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                        condimentum“</p>
+                </div>
+                <div class="footer__subscribe">
+                    <h2 class="footer__title">
+                        subscribe
+                        <span class="footer__subtitle">
+                            for our newletter and promotion
+                        </span>
+                    </h2>
+                    <form class="footer__form" action="#">
+                        <input class="footer__input" class="inp" type="email" placeholder="Enter Your Email">
+                        <button class="footer__button">subscribe</button>
+                    </form>
+                </div>
             </div>
         </section>
-        <section class="footer__sct2">
-            <p class="footer__text">© 2021 Brand All Rights Reserved.</p>
-            <ul class="footer__social-list">
-                <li class="footer__social-item">
-                    <img src="img/icon/facebook-ico.svg" alt="facebook">
-                </li>
-                <li class="footer__social-item">
-                    <img src="img/icon/instagram-ico.svg" alt="instagram">
-                </li>
-                <li class="footer__social-item">
-                    <img src="img/icon/pinterest-ico.svg" alt="pinterest">
-                </li>
-                <li class="footer__social-item">
-                    <img src="img/icon/twitter-ico.svg" alt="twitter">
-                </li>
-            </ul>
+        <section class="footer__social">
+            <div class="footer__social-wrp container">
+                <p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <img src="img/icon/facebook-ico.svg" alt="facebook">
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="img/icon/instagram-ico.svg" alt="instagram">
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="img/icon/pinterest-ico.svg" alt="pinterest">
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="img/icon/twitter-ico.svg" alt="twitter">
+                    </li>
+                </ul>
+            </div>
+
         </section>
     </footer>
 </body>
