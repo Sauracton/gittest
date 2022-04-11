@@ -16,13 +16,21 @@
 <body>
     <header class="header">
         <div class="header__wrp container">
-            <div>
-                <img class="header__logo" src="img/icon/hdr-main-ico.svg" alt="mainpage">
-                <img class="header__loup" src="img/icon/hdr-loup-ico.svg" alt="search for">
+            <div class="header__wrp">
+                <a class="header__mainpage" href="index.html">
+                    <img class="header__logo" src="img/icon/hdr-main-ico.svg" alt="mainpage">
+                </a>
+                <form class="header__searchbar" action="#" method="get">
+                    <label class="visually-hidden" for="hsi">search</label>
+                    <input class="header_search-inp" name="search" placeholder="Искать здесь..." type="search" id="hsi">
+                </form>
+                <button class="header__loup-btn" type="button">
+                    <img class="header__loup" src="img/icon/hdr-loup-ico.svg" alt="search for">
+                </button>
             </div>
             <ul class="header__list">
                 <li class="header__item">
-                    <button class="header__button">
+                    <button class="header__button" type="button">
                         <img src="img/icon/nav-burger-ico.png" alt="menu">
                     </button>
                 </li>
@@ -204,8 +212,10 @@
                         </span>
                     </h2>
                     <form class="footer__form" action="#">
-                        <input class="footer__input" class="inp" type="email" placeholder="Enter Your Email">
-                        <button class="footer__button">subscribe</button>
+                        <label class="visually-hidden" for="email">enter your email</label>
+                        <input class="footer__input" class="inp" type="email" required placeholder="Enter Your Email"
+                            id="email">
+                        <button class="footer__button" type="submit">subscribe</button>
                     </form>
                 </div>
             </div>
