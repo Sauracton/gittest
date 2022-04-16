@@ -40,6 +40,7 @@ body {
     justify-content: space-between;
     min-height: 75px;
     align-items: center;
+    position: relative;
 }
 
 .header__mainpage {
@@ -51,6 +52,12 @@ body {
     align-items: center;
 }
 
+.header__searchbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header__loup-btn {
     width: 44px;
     height: 44px;
@@ -58,12 +65,37 @@ body {
     border-style: none;
 }
 
-.header__searchbar {
-    display: none;
-}
-
 .header_search-inp {
     height: 41px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    box-shadow: none;
+    display: none;
+    outline: none;    
+}
+
+.header__searchbar:hover .header_search-inp {
+    display: block;
+    box-shadow: 0 0 5px 2px var(--items-bg-color);    
+}
+
+.header_search-inp:focus {
+    box-shadow: 0 0 5px 2px var(--items-bg-color);
+    display: block;
+}
+
+.header__menu-button {
+    border: none;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    background-image: url(../img/icon/nav-burger-ico.png);
+    background-repeat: no-repeat;
+    background-position: center;    
 }
 
 .header__list {
@@ -79,6 +111,25 @@ body {
     align-items: center;
 }
 
+.header__profile {
+    color: white;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/icon/hdr-profile-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__cart {
+    color: white;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/icon/hdr-basket-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 .header__mainpage:hover, .header__loup-btn:hover, .header__item:hover {
     background-color: var(--items-bg-color);
     box-shadow: 0 0 5px 2px var(--items-bg-color);    
@@ -88,17 +139,70 @@ body {
     box-shadow: 0 0 5px 2px var(--dark-pink);    
 }
 
-/* .header__logo {
-    margin: 0 41px 0 0;
-} */
+.header__mainpage:focus, .header__loup-btn:focus, .header__item:focus {
+    background-color: var(--items-bg-color);
+    box-shadow: 0 0 5px 2px var(--dark-pink);
+    outline: none;    
+}
 
 .header__nav {
     display: none;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    color: #000000;
+    padding-left: 20px;
 }
 
-.header__button {
-    border: none;
-    background-color: transparent;
+.header__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 37px 0 0 0;
+}
+
+.header__nav-item {
+margin: 24px 0 0 0;
+}
+
+.nav-sub__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+    text-decoration: none;
+    text-transform: uppercase;    
+}
+
+.nav-sub__item {
+    margin: 10px 0 0 10px;
+}
+
+.nav-sub__item-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.nav-sub__link:hover,
+.nav-sub__link:focus,
+.nav-sub__item-link:hover,
+.nav-sub__item-link:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.nav-sub__link:active,
+.nav-sub__item-link:active {
+    text-decoration: underline;
+    text-shadow: 0 0 1em var(--dark-pink)
 }
 
 .signboard {
@@ -242,7 +346,6 @@ body {
 .featured__item {
     width: 360px;
     box-sizing: border-box;
-    width: 360px;
     min-height: 260px;
     background: #F8F8F8;
     display: flex;
@@ -251,6 +354,57 @@ body {
     flex-direction: column;
     margin: 0 0 30px 0;    
 }
+
+.cart-wrapper {
+    position: relative;
+    width: 360px;
+    min-height: 260px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    display: none;
+  }
+  
+.featured__cart-btn {    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 1px solid white;
+    display: none;
+}
+
+.btn-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured__cart-btn-img {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.featured__cart-btn-text {
+    margin-left: 10px;
+}
+
+.featured__item:hover .featured__cart-btn,
+.featured__item:hover .overlay {
+  display: block;
+} 
 
 .featured__item-name {
     font-size: 13px;
@@ -286,6 +440,12 @@ body {
     color: var(--dark-pink);
     text-align: center;
     margin: 0 0 95px 0;
+}
+
+.featured__button:hover,
+.featured__button:focus {
+    background-color: var(--dark-pink);
+    color: white; 
 }
 
 .advantages {
