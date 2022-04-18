@@ -1,0 +1,19 @@
+@mixin font($font-weight:400, $font-size:14px, $line-height: 17px, $color: $black, $font-style: normal) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    font-style: $font-style;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-btwn-cntr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

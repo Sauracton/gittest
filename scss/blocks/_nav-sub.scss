@@ -1,0 +1,35 @@
+.nav-sub__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-sub__item {
+    margin: 10px 0 0 10px;
+}
+
+.nav-sub__item-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.nav-sub__link:hover,
+.nav-sub__link:focus,
+.nav-sub__item-link:hover,
+.nav-sub__item-link:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.nav-sub__link:active,
+.nav-sub__item-link:active {
+    text-decoration: underline;
+    text-shadow: 0 0 1em $dark-pink;
+}

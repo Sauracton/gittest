@@ -1,0 +1,67 @@
+.main {
+    min-width: 375px;
+}
+
+.signboard {
+    background-color: $light-pink;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signboard_photo {
+    display: block;
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+    max-height: 800px;
+}
+
+.signboard__title-wrp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 0 0 64px;
+}
+
+.signboard__rectangle {
+    width: 12px;
+    height: 92px;
+    background: $dark-pink;
+    margin: 0 28px 0 0;
+}
+
+.signboard__title {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+}
+
+.signboard__subtitle {
+    display: block;
+    font-size: 37px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+.signboard__subtitle-pink {
+    color: $dark-pink;
+    font-style: italic;
+}
+
+@media (max-width: $tablet-width) {
+    .signboard__title-wrp {
+        padding: 0;
+    }
+
+    .signboard_photo {
+        width: 40%;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .signboard_photo {
+        display: none;
+    }
+}

@@ -1,0 +1,140 @@
+.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured__title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 65px 0 0 0;
+}
+
+.featured__text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    text-align: center;
+    color: #9F9F9F;
+}
+
+.featured__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 48px 0 18px 0;
+}
+
+.featured__item {
+    width: 360px;
+    box-sizing: border-box;
+    min-height: 260px;
+    background: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+}
+
+.cart-wrapper {
+    position: relative;
+    width: 360px;
+    min-height: 260px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.featured__cart-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 1px solid white;
+    display: none;
+
+    &:hover,
+    &:focus {
+        background-color: $dark-pink;
+        border-color: $dark-pink;
+    }
+}
+
+.btn-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured__cart-btn-img {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.featured__cart-btn-text {
+    margin-left: 10px;
+}
+
+.featured__item:hover .featured__cart-btn,
+.featured__item:hover .overlay {
+    display: block;
+}
+
+.featured__item-name {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 25px 0 12px 16px;
+}
+
+.featured__item-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #5D5D5D;
+    margin: 0 0 0 16px;
+}
+
+.featured__price {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: $dark-pink;
+    margin: 18px 0 20px 16px;
+}
+
+.featured__button {
+    width: 211px;
+    height: 47px;
+    border: 1px solid $dark-pink;
+    background-color: transparent;
+    text-transform: capitalize;
+    color: $dark-pink;
+    text-align: center;
+    margin: 0 0 95px 0;
+
+    &:hover,
+    &:focus {
+        background-color: $dark-pink;
+        color: white;
+    }
+}
