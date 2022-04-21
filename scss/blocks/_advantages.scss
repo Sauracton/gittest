@@ -46,3 +46,13 @@
     line-height: 17px;
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    .advantages__list {
+        flex-direction: column;
+    }
+
+    .advantages__item {
+        margin: 20px auto;
+    }
+}
