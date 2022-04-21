@@ -1,0 +1,161 @@
+.header {
+    background-color: $black;
+}
+
+.header__wrp {
+    @include flex-btwn-cntr;
+    min-height: 75px;
+    position: relative;
+}
+
+.header__mainpage {
+    width: 44px;
+    height: 44px;
+    margin: 0 30px 0 0;
+    @include flex-center;
+}
+
+.header__searchbar {
+    @include flex-btwn-cntr;
+}
+
+.header__loup-btn {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-style: none;
+}
+
+.header_search-inp {
+    height: 41px;
+    background: none;
+    @include font(400, 20px, 22px, white);
+    border: none;
+    box-shadow: none;
+    display: none;
+    outline: none;
+}
+
+.header__searchbar:hover .header_search-inp {
+    display: block;
+    box-shadow: 0 0 5px 2px $items-bg-color;
+}
+
+.header_search-inp:focus {
+    box-shadow: 0 0 5px 2px $items-bg-color;
+    display: block;
+}
+
+.header__menu-button {
+    border: none;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    background-image: url(../img/icon/nav-burger-ico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    margin: 0 0 0 34px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__profile {
+    color: white;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/icon/hdr-profile-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__cart {
+    color: white;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/icon/hdr-basket-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.header__mainpage:hover,
+.header__loup-btn:hover,
+.header__item:hover {
+    background-color: $items-bg-color;
+    box-shadow: 0 0 5px 2px $items-bg-color;
+}
+
+.header__mainpage:active,
+.header__loup-btn:active,
+.header__item:active {
+    box-shadow: 0 0 5px 2px $dark-pink;
+}
+
+.header__mainpage:focus,
+.header__loup-btn:focus,
+.header__item:focus {
+    background-color: $items-bg-color;
+    box-shadow: 0 0 5px 2px $dark-pink;
+    outline: none;
+}
+
+.header__nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    color: #000000;
+    padding-left: 20px;
+
+    &-list {
+        margin-bottom: 30px;
+    }
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 37px 0 0 0;
+}
+
+.header__nav-item {
+    margin: 24px 0 0 0;
+}
+
+@media (max-width: $tablet-width) {
+    .header__searchbar:hover .header__list {
+        display: none;
+    }
+
+    .header_search-inp:focus .header__list {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .header {
+        min-width: 360px;
+    }
+
+    .header__nav {
+        width: 100%;
+        min-width: 360px;
+        top: 75px;
+        right: auto;
+        left: 0px;
+    }
+}
