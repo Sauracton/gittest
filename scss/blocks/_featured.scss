@@ -106,6 +106,12 @@
     text-transform: uppercase;
     color: #000;
     margin: 25px 0 12px 16px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
 .featured__item-text {

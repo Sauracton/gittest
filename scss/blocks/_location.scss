@@ -1,0 +1,34 @@
+.location {
+    height: 148px;
+    background-color: $light-pink;
+    display: flex;
+    align-items: center;
+}
+
+.location__wrp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.location__title {
+    @include font(400, 24px, 29px, $dark-pink);
+}
+
+.location__list {
+    @include flex-btwn-cntr;
+    text-transform: uppercase;
+
+    li {
+        border-right: 1px solid #636363;
+    }
+
+    li:last-child {
+        border-right: none;
+        color: $dark-pink;
+    }
+}
+
+.location__item {
+    @include font($font-weight: 300, $color: #636363);
+    padding: 0 5px;
+}
