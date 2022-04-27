@@ -22,21 +22,20 @@
 }
 
 .featured__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 48px 0 18px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 48px 0;
 }
 
 .featured__item {
-    width: 32%;
     box-sizing: border-box;
-    min-height: 260px;
     background: #F8F8F8;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin: 0 0 30px 0;
 }
 
 .cart-wrapper {
@@ -143,13 +142,14 @@
 }
 
 @media (max-width: $tablet-width) {
-    .featured__item {
-        width: 48%;
+    .featured__list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: $mobile-width) {
-    .featured__item {
-        width: 100%;
+    .featured__list {
+        grid-template-columns: 1fr;
     }
+
 }
